@@ -58,11 +58,6 @@ body{
   box-shadow: 0 2px 10px 0 rgba(0,0,0,0.12);
 }
 
-.sidebar.clothes-picker{
-  float: right;
-  right: 0;
-}
-
 .sidebar.status{
   float: left;
   left: 0;
@@ -142,6 +137,7 @@ body{
   overflow-y: scroll;
 }
 
+
 .controller-content {
   padding-top: 70px;
 }
@@ -185,7 +181,6 @@ body{
   padding: 0 15px;
   text-align: center;
 }
-*/
 
 h2.navbar-brand {
   margin-left: auto;
@@ -331,7 +326,7 @@ ul.nav li.active {
 }
 
 .popup .row {
-  padding: 20px;
+  padding-top: 25px;
 }
 
 .popup .modal-header i.fa {
@@ -339,5 +334,61 @@ ul.nav li.active {
 }
 
 img {
-  transition: all 0.3;
+  transition: all 0.3s;
 }
+
+.popup-modal {
+  padding: 0;
+  padding-left: 50px;
+  overflow: hidden;
+
+}
+
+.item-description {
+  width: 250px;
+  position: relative;
+  left: 35px;
+  display: block;
+  padding: 0;
+  box-shadow: 0 2px 10px 2px rgba(0,0,0,0.12);
+}
+
+.item-specifics, .item-story {
+  width: 250px;
+  text-align: left;
+}
+
+.item-story {
+  padding-top: 10px;
+}
+
+.save-button {
+  height: 50px;
+  width: 100px;
+  position: relative;
+  margin-top: 25px;
+  margin-bottom: 40px;
+  margin-left: 55px;
+}
+
+.descTitle, .itemTitle {
+  padding-top: 10px;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.item-description ul {
+  line-height: 160%;
+}
+
+.item-description .thing-card-colours {
+  padding-left: 40px;
+  padding-bottom: 50px;
+}
+
+.logo
+{
+  width: 100px;
+  height: 50px;
+}
+

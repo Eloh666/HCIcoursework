@@ -15,9 +15,12 @@ $(function() {
           {
             object:{
               name: 'Lemoncello Neck Top',
-              desc: 'Super-hip shirt',
+              desc: 'Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore ' +
+              'et dolore magna aliqua.',
               price: 20,
               availability: '3 in store, 5 for order',
+              suggestSize: '86% Small 14% Medium',
+              fabric: "100% cotton",
               colours: [
                 {
                   name: 'grey',
@@ -30,9 +33,12 @@ $(function() {
           {
             object:{
               name: 'Slim Fit V Neck',
-              desc: 'Even-hipper Shirt',
+              desc: 'Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore ' +
+              'et dolore magna aliqua.',
               price: 25,
               availability: '5 in store, 3 for order',
+              suggestSize: '86% Small 14% Medium',
+              fabric: "100% cotton",
               colours: [
                 {
                   name: 'navy-blue',
@@ -55,9 +61,12 @@ $(function() {
           {
             object:{
               name: 'meh Shirt',
-              desc: 'Yeah, just another shirt',
+              desc: 'Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore ' +
+              'et dolore magna aliqua.',
               price: 10,
               availability: 'not in store, 3 for order',
+              suggestSize: '86% Small 14% Medium',
+              fabric: "100% cotton",
               colours: [
                 {
                   name: 'blue',
@@ -70,9 +79,12 @@ $(function() {
           {
             object:{
               name: 'dogeShirt',
-              desc: 'WoW Much Shirt So Awesome',
+              desc: 'Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore ' +
+              'et dolore magna aliqua.',
               price: 999,
               availability: '10 in store, 50 for order',
+              suggestSize: '86% Small 14% Medium',
+              fabric: "100% cotton",
               colours: [
                 {
                   name: 'white',
@@ -87,8 +99,12 @@ $(function() {
           {
             object:{
               name: 'Plain Trousers',
-              desc: 'Just your regular trousers',
+              desc: 'Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore ' +
+              'et dolore magna aliqua.',
               price: 50,
+              availability: '10 in store, 50 for order',
+              suggestSize: '86% Small 14% Medium',
+              fabric: "100% cotton",
               colours: [
                 {
                   name: 'grey',
@@ -101,8 +117,12 @@ $(function() {
           {
             object:{
               name: 'Plain Trousers 2',
-              desc: 'Just your regular trousers but cheaper',
+              desc: 'Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore ' +
+              'et dolore magna aliqua.',
               price: 35,
+              availability: '10 in store, 50 for order',
+              suggestSize: '86% Small 14% Medium',
+              fabric: "100% cotton",
               colours: [
                 {
                   name: 'grey',
@@ -228,6 +248,12 @@ $(function() {
       var number = $(this).attr('id').split('-')[1];
       var clicked = state.model[type][number].object;
       // Change the text in the template copy
+      modal.find('li#thingFabrics').text(clicked.fabric);
+      modal.find('li#thingSize').text(clicked.suggestSize);
+      for(var i=0; i<clicked.colours.length; i++){
+        modal.find('div.thing-card-colours').append('<div style="background-color:'+clicked.colours[i].hex+';" class="colour"></div>');
+      }
+      modal.find('li#thingAvailability').text(clicked.availability);
       modal.find('p#thingName').text(clicked.name);
       modal.find('p#thingDescription').text(clicked.desc);
       // Change the state

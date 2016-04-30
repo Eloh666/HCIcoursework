@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="assets/css/font-awesome/css/font-awesome.min.css">
     <link href='https://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/theme.css">
     <script src="assets/js/jquery/jquery.min.js"></script>
     <script src="assets/js/bootstrap/bootstrap.min.js"></script>
   </head>
@@ -19,12 +20,12 @@
         </div>
       </div>
       <div class="controller-tablet col-md-7">
-        <div class="navigation navbar navbar-default">
-          <div class="row">
-            <div class="col-md-2">
-              <h2 class="navbar-left navbar-brand">LOGO</h2>
+        <div class="navigation navbar navbar-default top-header">
+          <div class="row top-header">
+            <div class="col-md-2 top-header">
+              <h2 class="navbar-left navbar-brand"><img class="logo" src="assets/img/logoDemo.gif"></h2>
             </div>
-            <div class="col-md-7">
+            <div class="col-md-7 top-header">
               <ul class="center nav navbar-nav">
                 <li class="active"><a href="#">All</a></li>
                 <li class="underslide"><a href="#">Men</a></li>
@@ -66,25 +67,39 @@
     <div class="popupTemplate" id="itemModalTemplate">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
-          <div class="modal-header">
-            <i class="closeButton fa fa-times fa-2x"></i><i class="saveButton fa fa-floppy-o fa-2x"></i><i class="fa fa-question fa-2x"></i>
+          <div class="modal-header popup-header">
+            <i class="closeButton fa fa-times fa-2x"></i><i class="fa fa-question fa-2x"></i>
           </div>
-          <div class="modal-body">
+          <div class="modal-body popup-modal">
             <div class="row">
-              <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-6 item-image">
                   <img class="img-responsive" id="thingImg">
                 </div>
-                <div class="col-md-6">
-                  <p id="thingName"></p>
-                  <p id="thingDescription"></p>
+                <div class="col-md-6 item-description">
+                  <div class="col-md-6 item-specifics">
+                    <p id="thingName" class="itemTitle"></p>
+                    <ul>
+                      <li id="thingFabrics"></li>
+                      <li id="thingSize"></li>
+                      <li id="thingAvailability"></li>
+                      <li class="colorsTag">Colours Availability: </li>
+                    </ul>
+                    <div class="thing-card-colours"></div>
+                  </div>
+                  <div class="col-md-6 item-story">
+                    <p class="descTitle">Item description: </p>
+                    <p id="thingDescription"></p>
+                    <div class="save-button">
+                      <button type="button" class="btn save-button"><i class="saveButton fa fa-floppy-o fa-2x"></i></button>
+                    </div>
+                  </div>
+                  <div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
 
     <!--Thing template-->
     <div id="thingTemplate" class="thing col-sm-3">
