@@ -47,6 +47,7 @@ body{
   border-bottom-left-radius: 2rem;
   width: 7.5%;
   position: fixed;
+  top: 150px;
   height: 420px;
   padding-left: 0;
   padding-right: 0;
@@ -55,7 +56,6 @@ body{
   float: left;
   background-color: #fff;
   z-index: 10;
-  box-shadow: 0 2px 10px 0 rgba(0,0,0,0.12);
 }
 
 .sidebar.status{
@@ -102,6 +102,10 @@ body{
   cursor: pointer;
 }
 
+.thing-card{
+  top: 105px;
+}
+
 .thing .thing-thumb {
   height: 100px;
   margin: 0 auto;
@@ -109,12 +113,12 @@ body{
 }
 
 .thing-card p.badge{
-  font-size: 1.2em;
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  background-color: rgba(0, 0, 0, 0.50);
-}
+    font-size: 1.2em;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.50);
+  }
 
 .thing .colourBall{
   z-index: 100;
@@ -132,11 +136,10 @@ body{
   right: 5%;
   border: 10px solid #000;
   background-color: #fff;
-  height: 500px;
+  height: 700px;
   border-radius: 2rem;
   overflow-y: scroll;
 }
-
 
 .controller-content {
   padding-top: 70px;
@@ -145,6 +148,10 @@ body{
 /*
 * Navbar
 */
+
+.top-header {
+  height: 140px !important;
+}
 
 .navigation {
   margin-bottom: 0;
@@ -159,6 +166,25 @@ body{
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
 }
+
+.nav-list {
+  text-align: center;
+  margin: auto;
+}
+
+.nav-row {
+  position: absolute;
+  top: 35px; left: 0; bottom: 0; right: 0;
+}
+
+.logo
+{
+  position: relative;
+  bottom: 20px;
+  width: 200px;
+  height: 100px;
+}
+
 
 .navbar-default {
   border-color: #DBDBDB;
@@ -385,10 +411,3 @@ img {
   padding-left: 40px;
   padding-bottom: 50px;
 }
-
-.logo
-{
-  width: 100px;
-  height: 50px;
-}
-

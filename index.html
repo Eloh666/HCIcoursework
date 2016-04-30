@@ -21,11 +21,11 @@
       </div>
       <div class="controller-tablet col-md-7">
         <div class="navigation navbar navbar-default top-header">
-          <div class="row top-header">
-            <div class="col-md-2 top-header">
+          <div class="row nav-row">
+            <div class="col-md-2">
               <h2 class="navbar-left navbar-brand"><img class="logo" src="assets/img/logoDemo.gif"></h2>
             </div>
-            <div class="col-md-7 top-header">
+            <div class="col-md-7 nav-list">
               <ul class="center nav navbar-nav">
                 <li class="active"><a href="#">All</a></li>
                 <li class="underslide"><a href="#">Men</a></li>
@@ -90,7 +90,11 @@
                     <p class="descTitle">Item description: </p>
                     <p id="thingDescription"></p>
                     <div class="save-button">
-                      <button type="button" class="btn save-button"><i class="saveButton fa fa-floppy-o fa-2x"></i></button>
+                      <button type="button" class="btn save-button save-button-item">
+                        <i class="fa fa-arrow-right save-button-icon" aria-hidden="true"></i>
+                        <br>
+                        <span id="thingPrice" class="save-button-text"></span>
+                      </button>
                     </div>
                   </div>
                   <div>
@@ -116,10 +120,10 @@
     <div id="thingCardTemplate" class="thing-card col-md-3">
       <div class="thing-card-img">
         <img>
-        <p class="badge"></p>
       </div>
-      <div class="thing-card-colours"></div>
+      <div class="thing-card-colours card-color-top"></div>
       <h5 class="thing-card-title"></h5>
+      <p class="badge"></p>
     </div>
 
     <!--Status Item template-->

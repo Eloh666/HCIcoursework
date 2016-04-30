@@ -248,6 +248,7 @@ $(function() {
       var number = $(this).attr('id').split('-')[1];
       var clicked = state.model[type][number].object;
       // Change the text in the template copy
+      modal.find('span#thingPrice').text('£'+clicked.price+' Add to list');
       modal.find('li#thingFabrics').text(clicked.fabric);
       modal.find('li#thingSize').text(clicked.suggestSize);
       for(var i=0; i<clicked.colours.length; i++){
